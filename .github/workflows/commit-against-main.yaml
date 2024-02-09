@@ -1,0 +1,18 @@
+name: Update file
+on: workflow_dispatch
+jobs:
+    resources:
+        name: Update resources
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: Update
+              run: echo "123" >> test
+            
+            - name: Update resources
+              uses: test-room-7/action-update-file@v1
+              with:
+                  file-path: test
+                  commit-msg: Auto Update file
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
