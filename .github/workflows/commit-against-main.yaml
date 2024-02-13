@@ -10,7 +10,7 @@ jobs:
             - uses: actions/checkout@v1
 
             - name: Update
-              run: echo "123" >> test
+              run: echo "1234" >> test
             
             - name: Update resources
               uses: test-room-7/action-update-file@v1
